@@ -2,14 +2,18 @@ import {
   LOCATION_REQ,
   LOCATION_SUCCESS,
   LOCATION_FAILURE,
-  GET_WEATHER_REQ,
-  GET_WEATHER_SUCCESS,
-  GET_WEATHER_FAILURE
+  GET_CITY_WEATHER_REQ,
+  GET_CITY_WEATHER_SUCCESS,
+  GET_CITY_WEATHER_FAILURE,
+  GET_DAILY_WEATHER_REQ,
+  GET_DAILY_WEATHER_SUCCESS,
+  GET_DAILY_WEATHER_FAILURE,
 } from "./actionTypes";
 
 const initState = {
   location: null,
-  weather: null,
+  cityWeather:null,
+  dailyWeather:null,
   isLoading: false,
   isError: false,
 };
@@ -36,25 +40,46 @@ export const reducer = (state = initState, action) => {
         isError: true,
       };
 
-    //GET WEATHER
+    // GET CITY WEATHER
 
-    case GET_WEATHER_REQ:
+    case GET_CITY_WEATHER_REQ:
       return {
         ...state,
         isLoading: true,
       };
-    case GET_WEATHER_SUCCESS:
+    case GET_CITY_WEATHER_SUCCESS:
       return {
         ...state,
-        weather: action.payload,
+        cityWeather: action.payload,
         isLoading: false,
       };
-    case GET_WEATHER_FAILURE:
+    case GET_CITY_WEATHER_FAILURE:
       return {
         ...state,
         isLoading: false,
         isError: true,
       };
+
+    // GET DAILY WEATHER
+
+    case GET_DAILY_WEATHER_REQ:
+      return {
+        ...state,
+        isLoading: true,
+      };
+    case GET_DAILY_WEATHER_SUCCESS:
+      return {
+        ...state,
+        dailyWeather: action.payload,
+        isLoading: false,
+      };
+    case GET_DAILY_WEATHER_FAILURE:
+      return {
+        ...state,
+        isLoading: false,
+        isError: true,
+      };
+
 
     default:
       return state;

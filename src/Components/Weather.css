@@ -1,0 +1,95 @@
+#daily_weather_main_wrap {
+  /* border: 1px solid red; */
+  height: auto;
+  display: flex;
+  overflow-x: scroll;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  font-weight: 600;
+}
+
+#daily_weather_temp_wrap {
+  /* border: 1px solid blue; */
+  display: flex;
+  width: 60px;
+  margin-left: -10px;
+}
+
+#daily_weather_sections {
+  width: 100px;
+  margin-right: 20px;
+  padding: 15px;
+  padding-left: 25px;
+}
+
+.weather_logo {
+  height: 40px;
+  margin-top: 10px;
+}
+
+.weather_logo_current {
+  height: 40px;
+  margin-left: 18px;
+}
+
+#current_weather_wrap {
+  display: flex;
+  font-size: 35px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+#weather_second_wrap {
+  box-shadow: 0 8px 10px -3px rgb(0 0 0 / 10%), 0 4px 6px -2px rgb(0 0 0 / 10%),
+    0 -8px 12px 0 rgb(0 0 0 / 5%), 0 -2px 3px -2px rgb(0 0 0 / 1%);
+  padding: 10px;
+}
+
+#pressure_humidity_wrap {
+  display: flex;
+  margin-top: 50px;
+}
+
+#pressure_wrap {
+  /* border: 1px solid red; */
+  width: 190px;
+  padding: 10px;
+  background: #f3fbff;
+  margin-right: 10px;
+}
+
+#humidity_wrap {
+  /* border: 1px solid red; */
+  width: 190px;
+  padding: 10px;
+  background: #f3fbff;
+}
+
+#pressure_wrap > :nth-child(1) {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+#humidity_wrap > :nth-child(1) {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+#sunrise_sunset_wrap{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+#sunrise_wrap>:nth-child(1){
+    font-size: 17px;
+  font-weight: 600;
+}
+
+#sunset_wrap>:nth-child(1){
+    font-size: 17px;
+  font-weight: 600;
+}
+
+

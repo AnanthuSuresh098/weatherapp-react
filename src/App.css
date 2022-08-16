@@ -1,17 +1,54 @@
-body{
-
+body {
 }
 
 .App {
-  
   margin: auto;
   margin-top: 20px;
-    height: 640px;
-  width: 360px;
-  border: 1px solid red;
+  height: auto;
+  width: 450px;
+  margin-bottom: 30px;
 }
 
-#search_input{
-  width: 93%;
-  padding: 10px;
+#search_input {
+  width: 60%;
+  font-weight: 700;
+  font-size: 18px;
+  border:none;
+  outline: none;
+  margin-left: 20px;
+  padding: 3px;
+}
+
+#search_box{
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border-radius: 5px;
+  display: flex;
+  padding: 5px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active  {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+#search_box_location_icon{
+  font-size: 21px;
+}
+
+#search_box_search_icon{
+  font-size: 23px;
+  margin-left: 100px;
+  font-weight: 400;
+}
+
+#loading_gif{
+  width: 500px;
+  margin-left: -45px;
+}
+
+#search_input::placeholder{
+  font-size: 16px;
+  font-weight: 300;
 }
