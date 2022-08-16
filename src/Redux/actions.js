@@ -36,7 +36,7 @@ const locationFailure = () => ({
 export const locationData = () => (dispatch) => {
   dispatch(locationReq());
   axios
-    .get("https://ip-api.com/json/")
+    .get("http://ip-api.com/json/")
     .then((res) => dispatch(locationSuccess(res.data)))
     .catch(() => dispatch(locationFailure()));
 };
