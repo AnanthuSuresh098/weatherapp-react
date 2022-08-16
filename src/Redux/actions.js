@@ -36,7 +36,7 @@ const locationFailure = () => ({
 export const locationData = () => (dispatch) => {
   dispatch(locationReq());
   axios
-    .get("http://ip-api.com/json/")
+    .get("https://cors-anywhere.herokuapp.com/ip-api.com/json/")
     .then((res) => dispatch(locationSuccess(res.data)))
     .catch(() => dispatch(locationFailure()));
 };
